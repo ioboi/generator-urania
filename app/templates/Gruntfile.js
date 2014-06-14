@@ -267,6 +267,28 @@ module.exports = function(grunt) {
           dest: '<%%= config.dist %>/images'
         }]
       }
+    },
+    svgmin: {
+      options: {
+        plugins: [{
+          removeViewBox: false
+        }, {
+          removeUselessStrokeAndFill: false
+        }, {
+          convertPathData: {
+            straightCurves: false
+          }
+        }]
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%%= config.app %>/images',
+          src: ['**/*.svg'],
+          dest: '<%%= config.dist %>/images',
+          ext: '.svg'
+        }]
+      }
     }
   });
 
@@ -296,6 +318,7 @@ module.exports = function(grunt) {
     'cssmin',
     'htmlmin',
     'imagemin',
+    'svgmin:dist',
     'uglify:dist'
   ]);
 
