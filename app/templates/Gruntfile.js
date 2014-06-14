@@ -30,7 +30,7 @@ module.exports = function(grunt) {
         files: ['Gruntfile.js']
       },
       jade: {
-        files: ['app/jade/*jade'],
+        files: ['app/jade/**/*.jade'],
         tasks: ['jade'],
       },
       livereload: {
