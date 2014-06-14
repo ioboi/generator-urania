@@ -204,7 +204,7 @@ module.exports = function(grunt) {
             'node_modules/grunt-contrib-stylus/node_modules',
             "bower_components/normalize-css",
             'node_modules/jeet/stylus',
-            'node_modules/rupture/rupture'
+            'node_modules/rupture'
           ],
           "include css": true
         },
