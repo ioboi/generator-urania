@@ -56,6 +56,15 @@ module.exports = function(grunt) {
           'app/coffee/*coffee'
         ],
         tasks: ['coffee:compile']
+      },
+      autoprefixer: {
+        files: [
+          '.tmp/styles/**/*.css'
+        ],
+        tasks: ['autoprefixer'],
+        options: {
+          spawn: false
+        }
       }
     },
     jade: {
@@ -289,6 +298,19 @@ module.exports = function(grunt) {
           ext: '.svg'
         }]
       }
+    },
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 version', 'ie 8', 'ie 9']
+      },
+      // prefix all files
+      build: {
+        expand: true,
+        flatten: true,
+        cwd: '.tmp/styles',
+        src: '**/*.css', // -> src/css/file1.css, src/css/file2.css
+        dest: '.tmp/styles' // -> dest/css/file1.css, dest/css/file2.css
+      }
     }
   });
 
@@ -312,6 +334,7 @@ module.exports = function(grunt) {
     'clean:dist',
     'jade',
     'stylus',
+    'autoprefixer',
     'coffee',
     'concurrent:dist',
     'copy:dist',
