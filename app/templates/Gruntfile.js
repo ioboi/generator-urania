@@ -213,7 +213,8 @@ module.exports = function(grunt) {
             'node_modules/grunt-contrib-stylus/node_modules',
             "bower_components/normalize-css",
             'node_modules/jeet/stylus',
-            'node_modules/rupture'
+            'node_modules/rupture',
+            'node_modules/colors.css/stylus',
           ],
           "include css": true
         },
