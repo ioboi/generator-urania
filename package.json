@@ -20,7 +20,7 @@
     "app"
   ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator", "static website generator"
   ],
   "dependencies": {
     "yeoman-generator": "~0.16.0",
