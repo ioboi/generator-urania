@@ -1,7 +1,7 @@
 {
   "name": "generator-urania",
   "version": "0.0.1",
-  "description": "Yeoman generator for a simple static website",
+  "description": "A static website generator with smooth workflow",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "ioboi/generator-urania",
